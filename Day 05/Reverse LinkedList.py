@@ -26,3 +26,23 @@ class Solution:
             
         #head = prevPtr
         return prevPtr
+    
+    
+#maybe better
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if head == None:
+            return None
+        
+        prevPtr = None
+        currPtr = head
+        nextPtr = None
+        
+        while currPtr:
+            nextPtr = currPtr.next
+            currPtr.next = prevPtr
+            prevPtr = currPtr
+            currPtr = nextPtr
+            
+        #head = prevPtr
+        return prevPtr
