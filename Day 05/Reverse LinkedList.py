@@ -47,3 +47,28 @@ class Solution:
             
         #head = prevPtr
         return prevPtr
+    
+    
+    
+#RECURSIVE
+class Solution:
+    def reverse_recur(self, head):
+        if (head == None or head.next == None):
+            return head
+        
+        new_head = self.reverse_recur(head.next) 
+        #will go deep till end and return the last node as head
+        
+        #find the next node from the curr node
+        next_node = head.next
+        
+        #link next of next node to the curr (head)
+        next_node.next = head
+        
+        #link next of curr node to null
+        head.next = None
+        
+        return new_head
+        
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:        
+        return self.reverse_recur(head)
