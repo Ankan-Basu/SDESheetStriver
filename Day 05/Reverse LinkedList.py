@@ -31,8 +31,9 @@ class Solution:
 #maybe better
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if head == None:
-            return None
+        #if head == None:
+        #    return None
+        #already handled in currPtr != None of while loop
         
         prevPtr = None
         currPtr = head
