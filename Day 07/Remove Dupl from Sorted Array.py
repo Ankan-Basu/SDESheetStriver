@@ -10,6 +10,7 @@ class Solution:
             else:
                 ptr1 += 1
                 nums[ptr1] = nums[ptr2]
+                ptr2 += 1
         
         
         return ptr1 + 1 #since it is 0 based index
